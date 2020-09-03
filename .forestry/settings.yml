@@ -22,6 +22,8 @@ sections:
   label: Products
   create: documents
   match: "**/*"
+  templates:
+  - product
 - type: document
   path: content/data/info.json
   label: Info Page
