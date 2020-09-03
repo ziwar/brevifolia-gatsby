@@ -23,5 +23,45 @@ fields:
   config:
     maxSize: 1
   label: Featured Image
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+- name: authors
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: pages
+      section: author-list
+  label: Authors
+- name: blocks
+  type: blocks
+  label: Blocks
+  template_types:
+  - blog-post
+  config:
+    min: 
+    max: 
+- name: Repeatable
+  type: field_group_list
+  fields:
+  - name: field1
+    type: text
+    config:
+      required: false
+    label: Field1
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Repeatable
+- name: template
+  type: include
+  config: {}
+  template: info-page
+  label: Template
 pages:
 - tiitllelele.md
